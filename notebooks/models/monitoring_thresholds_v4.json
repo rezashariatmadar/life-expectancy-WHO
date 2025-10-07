@@ -1,0 +1,10 @@
+{
+  "r2_degradation_warning": 0.9208212934986609,
+  "r2_degradation_critical": 0.9008212934986609,
+  "rmse_increase_warning": 2.3953594712862993,
+  "rmse_increase_critical": 2.695359471286299,
+  "max_residual_warning": 5.0,
+  "max_residual_critical": 8.0,
+  "prediction_range_min": 30.0,
+  "prediction_range_max": 95.0
+}

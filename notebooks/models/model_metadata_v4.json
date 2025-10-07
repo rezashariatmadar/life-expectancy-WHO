@@ -1,0 +1,62 @@
+{
+  "model_name": "Optimized XGBoost",
+  "model_type": "XGBRegressor",
+  "version": "4.0.0",
+  "created_date": "2025-09-23T10:52:31.031997",
+  "phase": "Phase 4E - Production Pipeline",
+  "performance_metrics": {
+    "test_r2": 0.9308212934986609,
+    "test_rmse": 2.195359471286299,
+    "test_mae": 1.5253720101111574,
+    "test_mape": 0.021910144102351245,
+    "accuracy_within_2yr": 75.0455373406193,
+    "accuracy_within_3yr": 85.97449908925319,
+    "baseline_improvement": 0.0038212934986608937
+  },
+  "cross_validation_results": {
+    "stability_score": 0.27281467959811356,
+    "stability_status": "POOR",
+    "temporal_cv": 0.9485532903964737,
+    "geographical_cv": 0.6154689713018386
+  },
+  "features": [
+    "Status",
+    "Region",
+    "Schooling",
+    "Adult Mortality",
+    "HIV/AIDS",
+    "Income composition of resources",
+    "BMI",
+    "GDP",
+    "Hepatitis B",
+    "Polio",
+    "Diphtheria",
+    "percentage expenditure",
+    "Health_Access_Index",
+    "Education_Economy_Index",
+    "Vaccination_Coverage_Index",
+    "Region_Africa",
+    "Region_Americas",
+    "Region_Asia",
+    "Region_Europe",
+    "Region_Other/Oceania",
+    "Status_Developed",
+    "Years_Since_2000"
+  ],
+  "training_data": {
+    "samples": 2379,
+    "features": 22,
+    "time_period": "2000-2012",
+    "countries": 183
+  },
+  "validation_data": {
+    "samples": 549,
+    "time_period": "2013-2015",
+    "countries": 183
+  },
+  "production_readiness": {
+    "status": "GOOD - DEPLOY WITH MONITORING",
+    "monitoring_level": "ENHANCED",
+    "deployment_ready": true
+  }
+}
