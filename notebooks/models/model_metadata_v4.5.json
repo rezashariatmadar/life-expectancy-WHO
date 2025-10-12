@@ -1,0 +1,121 @@
+{
+  "model_name": "Phase 4.5 Hybrid Multi-Model Pipeline",
+  "version": "4.5.0",
+  "created_date": "2025-10-08T16:39:10.465974",
+  "phase": "Phase 4.5 - Critical Issues Resolution",
+  "architecture": {
+    "type": "Hybrid Ensemble",
+    "components": [
+      "Development Status Router (2 specialized XGBoost models)",
+      "Regional Calibration Framework (Ridge regression layers)",
+      "Diverse Ensemble (Temporal + Geographic + Feature-subset + Algorithm diversity)",
+      "Meta-learner (Weighted combination)"
+    ],
+    "total_base_models": 14,
+    "routing_strategy": "Status-aware with regional calibration"
+  },
+  "performance_metrics": {
+    "test_r2": 0.9282424267053908,
+    "test_rmse": 2.2359047334392166,
+    "test_mae": 1.537359028243872,
+    "test_mape": 2.2091990256476453,
+    "accuracy_within_2yr": 75.0455373406193,
+    "accuracy_within_3yr": 86.52094717668488,
+    "phase4_improvement": -0.0025788667932701292
+  },
+  "cross_validation_results": {
+    "temporal_cv": {
+      "mean": 0.9996424678981232,
+      "std": 5.64952050981513e-05,
+      "status": "PASSED"
+    },
+    "geographical_cv": {
+      "mean": 0.9994922403056667,
+      "std": 0.00029435437950659193,
+      "status": "PASSED",
+      "improvement_from_phase4": 0.37949224030566675
+    },
+    "development_status_cv": {
+      "mean": 0.999377095505702,
+      "std": 0.0003814267658208137,
+      "status": "PASSED",
+      "improvement_from_phase4": 1.319377095505702
+    },
+    "stratified_kfold": {
+      "mean": 0.9997255158877527,
+      "std": 4.182965176718832e-05
+    }
+  },
+  "stability_assessment": {
+    "overall_mean_r2": 0.9995914889099481,
+    "overall_std": 0.00024167227806831508,
+    "stability_score": 0.9997582289557788,
+    "stability_status": "EXCELLENT",
+    "target": 0.8,
+    "status": "PASSED",
+    "improvement_from_phase4": 0.7297582289557788
+  },
+  "critical_issues_resolution": {
+    "development_status_bias": {
+      "before": -0.32,
+      "after": 0.999377095505702,
+      "target": 0.85,
+      "resolved": true
+    },
+    "geographic_limitations": {
+      "before": 0.62,
+      "after": 0.9994922403056667,
+      "target": 0.9,
+      "resolved": true
+    },
+    "stability_issues": {
+      "before": 0.27,
+      "after": 0.9997582289557788,
+      "target": 0.8,
+      "resolved": true
+    }
+  },
+  "features": [
+    "Status",
+    "Region",
+    "Schooling",
+    "Adult Mortality",
+    "HIV/AIDS",
+    "Income composition of resources",
+    "BMI",
+    "GDP",
+    "Hepatitis B",
+    "Polio",
+    "Diphtheria",
+    "percentage expenditure",
+    "Health_Access_Index",
+    "Education_Economy_Index",
+    "Vaccination_Coverage_Index",
+    "Region_Africa",
+    "Region_Americas",
+    "Region_Asia",
+    "Region_Europe",
+    "Region_Other/Oceania",
+    "Status_Developed",
+    "Years_Since_2000"
+  ],
+  "training_data": {
+    "samples": 2379,
+    "features": 22,
+    "time_period": "2000-2012",
+    "countries": 183,
+    "developed_countries": 416,
+    "developing_countries": 1963
+  },
+  "validation_data": {
+    "samples": 549,
+    "time_period": "2013-2015",
+    "countries": 183
+  },
+  "production_readiness": {
+    "overall_status": "NEEDS REVIEW",
+    "monitoring_level": "STANDARD",
+    "deployment_ready": false,
+    "all_targets_met": true
+  }
+}

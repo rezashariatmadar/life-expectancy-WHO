@@ -1,0 +1,12 @@
+{
+  "r2_degradation_warning": 0.9082424267053908,
+  "r2_degradation_critical": 0.8782424267053908,
+  "rmse_increase_warning": 2.5359047334392164,
+  "rmse_increase_critical": 2.7359047334392166,
+  "stability_score_warning": 0.9497582289557788,
+  "stability_score_critical": 0.8997582289557788,
+  "max_residual_warning": 6.0,
+  "max_residual_critical": 10.0,
+  "geo_cv_degradation_warning": 0.9494922403056667,
+  "status_cv_degradation_warning": 0.9493770955057019
+}

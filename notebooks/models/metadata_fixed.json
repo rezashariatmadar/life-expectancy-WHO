@@ -1,0 +1,22 @@
+{
+  "version": "Phase 4.5 FIXED",
+  "created": "2025-10-08T16:58:18.598099",
+  "test_r2": 0.9274776287970015,
+  "test_rmse": 2.247788378162236,
+  "kfold_cv": 0.9561225713623787,
+  "status_cv": -0.1395263378688204,
+  "geo_cv": 0.6069615648048406,
+  "stability": 0.24421317855577918,
+  "loco_r2": -1.4749452464067196,
+  "overfitting": 0.05474612005686952,
+  "pass_rate": 37.5,
+  "weighted_pass": 35.714285714285715,
+  "decision": "\u274c NOT APPROVED",
+  "issues_fixed": [
+    "Data leakage in cross-validation",
+    "LOCO validation methodology",
+    "Status encoding (Developed/Developing)",
+    "Overfitting (added regularization)",
+    "Realistic performance metrics"
+  ]
+}
